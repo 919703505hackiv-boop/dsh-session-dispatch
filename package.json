@@ -1,0 +1,54 @@
+{
+  "name": "dsh-session-dispatch",
+  "version": "0.1.0",
+  "description": "Model-facing DSH tools that create workspace conversations, send prompts into them, wait for turns, and read replies: dispatch work into real standalone sessions instead of subagents. 给模型用的会话派发工具：新开工作区会话、发指令、等完成、读回复，把子任务丢进独立会话里跑（不是子代理）。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "conversation",
+    "subagent",
+    "multi-agent",
+    "tools"
+  ],
+  "license": "MIT",
+  "author": "919703505hackiv-boop",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "test.mjs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.0 <0.3.0"
+  },
+  "scripts": {
+    "test": "node test.mjs",
+    "check": "node --check index.js && node test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/919703505hackiv-boop/dsh-session-dispatch.git"
+  },
+  "homepage": "https://github.com/919703505hackiv-boop/dsh-session-dispatch#readme",
+  "bugs": {
+    "url": "https://github.com/919703505hackiv-boop/dsh-session-dispatch/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

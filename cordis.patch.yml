@@ -1,0 +1,12 @@
+# dsh-session-dispatch — bundle patch for a DSH profile.
+#
+# `dsh plugin --profile web add dsh-session-dispatch` appends this package to the
+# profile's bundle list; the loader then applies this patch layer and inserts the
+# plugin row below. `name` must match the npm package name exactly (Node module
+# resolution uses it), and `id` must stay unique inside the profile.
+#
+# If the old local plugin row `tool-session-dispatch3` is still present, remove it
+# first: both register the same five tool names, and duplicate tool names fail.
+- insert:
+    - id: tool-session-dispatch
+      name: dsh-session-dispatch
