@@ -1,8 +1,8 @@
 {
   "$schema": "../schema/plugin.schema.json",
-  "id": "919703505hackiv-boop/chat-build-3d/plugins/dsh-session-dispatch",
+  "id": "919703505hackiv-boop/dsh-session-dispatch",
   "name": "dsh-session-dispatch",
-  "repository": "https://github.com/919703505hackiv-boop/chat-build-3d",
+  "repository": "https://github.com/919703505hackiv-boop/dsh-session-dispatch",
   "category": "session",
   "description": {
     "en": "Adds five model-facing tools for dispatching work to independent workspace conversations: create, send, wait, read, and list.",
